@@ -1,0 +1,5 @@
+include ':app'
+rootProject.name = "JNI Test"
+
+include ':opencv'
+project(':opencv').projectDir = new File(opencvsdk + '/sdk')
