@@ -223,12 +223,18 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 private void doSomethingWithImage(Image image) {
+//                    File imgFile = new  File("/storage/emulated/0/Pandu/r.png");
+//                    Bitmap fbitmapImage = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+//                    int width = fbitmapImage.getWidth();
+//                    int height = fbitmapImage.getHeight();
+
                     ByteBuffer buffer = image.getPlanes()[0].getBuffer();
                     byte[] bytes = new byte[buffer.capacity()];
                     buffer.get(bytes);
 
                     Bitmap bitmapImage = BitmapFactory.decodeByteArray(bytes, 0, bytes.length, null);
                     int[] pixels = new int[width * height];
+
                     bitmapImage.getPixels(pixels, 0, width, 0, 0, width, height);
 
                     doSomething(pixels, width, height);

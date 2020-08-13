@@ -74,7 +74,7 @@ Java_zds_jnitest_MainActivity_doSomething(
 
 
 
-    __android_log_print(ANDROID_LOG_DEBUG, "XXX", "%d, %d, %d", r, g, b);
+//    __android_log_print(ANDROID_LOG_DEBUG, "XXX", "%d, %d, %d", r, g, b);
 
     env->ReleaseIntArrayElements(arr, data, 0);
 }
